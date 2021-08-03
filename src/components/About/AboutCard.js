@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import { ImPointRight } from "react-icons/im";
+import { FaPlaystation, FaPlaneDeparture } from "react-icons/fa";
+import { GiFamilyHouse, GiAmericanFootballHelmet } from "react-icons/gi";
 
 function AboutCard() {
   return (
@@ -8,30 +9,35 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="purple">Soumyajit Behera </span>
-            from <span className="purple"> Bhubaneswar, India.</span>
-            <br />I am a junior pursuing IMSC in Maths and Computing in BIT
-            Mesra.
+            Hi! I am <span className="purple">Justin Lupica </span>
+            from <span className="purple"> Toledo, OH.</span>
+            <br />I am a Software Engineering Graduate from Flatiron, with a
+            passion for <span className="purple"> Front End Development</span>
             <br />
             <br />
-            Apart from coding, some other activities that I love to do!
+            When I'm not coding, here are some other activities that I love to
+            do!
           </p>
           <ul>
             <li className="about-activity">
-              <ImPointRight /> Playing Games
+              <FaPlaystation /> Playing Games
             </li>
             <li className="about-activity">
-              <ImPointRight /> Writting Tech Blogs
+              <GiFamilyHouse /> Spending time with my wife and kids
             </li>
             <li className="about-activity">
-              <ImPointRight /> Travelling
+              <FaPlaneDeparture /> Traveling
+            </li>
+            <li className="about-activity">
+              <GiAmericanFootballHelmet /> Being a diehard Cincinnati Bengals
+              fan!
             </li>
           </ul>
 
-          <p style={{ marginBlockEnd: 0, color: "rgb(155 126 172)" }}>
+          {/* <p style={{ marginBlockEnd: 0, color: "rgb(155 126 172)" }}>
             "Strive to build things that make a difference!"{" "}
           </p>
-          <footer className="blockquote-footer">Soumyajit</footer>
+          <footer className="blockquote-footer">Soumyajit</footer> */}
         </blockquote>
       </Card.Body>
     </Card>
