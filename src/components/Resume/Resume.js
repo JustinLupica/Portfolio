@@ -1,33 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
 import Resumecontent from "./ResumeContent";
-import axios from "axios";
-import pdf from "../../Assets/Soumyajit-Behera.pdf";
+import pdf from "../../Assets/justinLupicaResume.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 
 function Resume() {
-  const uri = "https://porfolio-backend.vercel.app/ranks/getRanks";
-  const [spojRank, upadteSpojRank] = useState(0);
-  const [hackerrank, upadteHackerank] = useState(0);
-  const [sem, upadateSem] = useState(0);
-  const [cgpa, upadteCgpa] = useState(0);
-
-  useEffect(() => {
-    axios
-      .get(uri)
-      .then((res) => {
-        upadteSpojRank(res.data.message[0].spojRank);
-        upadteHackerank(res.data.message[1].hackerrank);
-        upadteCgpa(res.data.message[2].cgpa);
-        upadateSem(res.data.message[3].sem);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
-
   return (
     <Container fluid className="resume-section">
       <Particle />
@@ -35,66 +15,83 @@ function Resume() {
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button variant="primary" href={pdf} target="_blank">
             <AiOutlineDownload />
-            &nbsp;Download CV
+            &nbsp;Download Resume
           </Button>
         </Row>
         <Row className="resume">
           <Col md={6} className="resume-left">
-            <h3 className="resume-title">Experience</h3>
+            <h3 className="resume-header">Experience</h3>
             <Resumecontent
-              title="JUNIOR ML ENGINEER [Omdena]"
-              date="June 2020 - August 2020"
+              title="Eston's Bakery, Toledo OH -- Web Developer (Contract)"
+              date="January 2020 - March 2020, June 2021 - Current"
               content={[
-                "Assembled the data from various social media platforms using Twitter, Reddit.Interpreted the collected text using word-clouds and various other factors that affect the change of sentiments of youth.",
-                " Utilized the data to find the issues using Topic Modelling and Building models using LSTM, BERT to predict the sentiments of the youth.",
-              ]}
-            />
-            <h3 className="resume-title">Extracurricular Activities</h3>
-            <Resumecontent
-              title="Web Developer [Pantheon-2019 Technical Fest of BIT Mesra]"
-              content={[
-                "Worked on creating the frontend-end of the website using Bootstrap, Javascript.",
+                "-Built a Ruby on Rails application that is able to take orders in from the front end, and associate the order with a customer and existing products in the backend database. This project was a full-stack application and used an MVC architecture file structure.",
+                "-Built out the online store for the company to expand into e-commerce. Created custom website pages, sections, and features needed using HTML, CSS, JavaScript, and Liquid.",
               ]}
             />
             <Resumecontent
-              title="Web Developer [Bitotsav-2020 Technical Fest of BIT Mesra]"
+              title="Freelancer, Toledo OH -- Web Developer/3D Modeler"
+              date="January 2020 - June 2021"
               content={[
-                "Operated on developing the frontend end of the website using Bootstrap, Javascript and backend APIs using Node.js",
+                "-Worked on various projects for various clients building out both 3d models to be used for advertising or 3d printing purposes, as well as coding projects to help businesses become more organized or provide a service they are wanting to incorporate into their business.",
+              ]}
+            />
+            <Resumecontent
+              title="Charley's Steakhouse, Orlando FL -- Lead Grill Pit Master"
+              date="July 2019 - December 2019"
+              content={[
+                "-Lead the Grill Pit to ensure proper stocking of products, entrees were cooked to proper temperature, work area was clean, and sanitized regularly to comply with health codes and an organized work environment.",
+              ]}
+            />
+            <Resumecontent
+              title="Chef Marcel Catering, Toledo OH -- Catering Chef, Pastry Chef"
+              date="August 2015 - July 2019"
+              content={[
+                "-Assisted the Head Chef Marcel in various duties, such as overseeing the catering department, serving as the Pastry Chef, and working many events in many high-end locations such as pristine Country Clubs, Yacht Clubs, Museums, Welltower (formerly Health Care REIT, a fortune 500 multi-million dollar company).",
+              ]}
+            />
+            <Resumecontent
+              title="AdToons, Toledo OH -- Animator/Editor(Contract)"
+              date="February 2015 - August 2015"
+              content={[
+                "-Provided animations and editing for Adtoons’ marketing videos. This work included editing within Premiere to sync actions on screen to a voiceover, and creating animations in After Effects and Blender/Autodesk Maya to render and edit the animations over the video.",
               ]}
             />
           </Col>
           <Col md={6} className="resume-right">
-            <h3 className="resume-title">Education</h3>
+            <h3 className="resume-header">Education</h3>
             <Resumecontent
-              title="IMSC MATHS AND COMPUTING [BIT Mesra, Ranchi] "
-              date="2018 - Present"
-              content={[`CGPA: ${cgpa} (Till ${sem}th Sem)`]}
+              title="Flatiron School - Software Engineering"
+              date="2020 - 2021"
+              content={[
+                "Flatiron School is a highly intensive, and immersive software engineering program that has about a 6% acceptance rate.",
+              ]}
             />
             <Resumecontent
-              title="12TH BOARD [ODM Public School,Odisha]"
-              date="2015 - 2017"
-              content={["Precentage: 88%"]}
+              title="Full Sail University - 3D Computer Animation"
+              date="2018-2020"
+              content={[
+                "Full Sail University is a leading school in the  3d computer animation industry located in Winter Park (Orlando) FL.",
+              ]}
             />
-            <Resumecontent
-              title="10TH BOARD [ST Mary's School,Odisha] "
-              date="2005 - 2015"
-              content={["Precentage: 86%"]}
-            />
-            <h3 className="resume-title">Ranks and Achivements</h3>
+            <h3 className="resume-header">Tech Skills</h3>
             <Resumecontent
               title=""
               content={[
-                `Current rank in Spoj ${spojRank}`,
-                `Current rank in HackerRank  ${hackerrank}`,
-                "Top Performer in Code-Break 1.0",
-                "Participant in Hack-A-Bit 2019",
+                "Ruby: Ruby on Rails, Sinatra, ActiveRecord",
+                "JavaScript(ES6): NodeJS, React, React Native, React Native Navigation, Reux, Thunk, Hooks, Electron, Express",
+                "SQL: SQLite3, PostgreSQL",
+                "HTML5, CSS",
+                "Microsoft Office Suite",
+                "3D/Design: Blender, Autodesk Maya, Substance 3d, Adobe Creative Suite (Photoshop, Premiere, After Effects)",
               ]}
             />
           </Col>
         </Row>
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button variant="primary" href={pdf} target="_blank">
-          <AiOutlineDownload />&nbsp;Download CV
+            <AiOutlineDownload />
+            &nbsp;Download Resume
           </Button>
         </Row>
       </Container>

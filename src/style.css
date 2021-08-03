@@ -636,6 +636,11 @@ html {
   padding-bottom: 30px;
 }
 
+.resume-header {
+  color: #c770f0;
+  font-weight: bold;
+}
+
 .resume .resume-item {
   padding: 0 0 10px 25px;
   margin-top: -2px;
