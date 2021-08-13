@@ -14,6 +14,14 @@ html {
   --imp-text-color: #c770f0;
 }
 
+.col-md-12 {
+  padding: 20px;
+}
+
+.card-footer {
+  padding-top: 100px;
+}
+
 .purple {
   color: var(--imp-text-color) !important;
 }
@@ -252,6 +260,7 @@ html {
 }
 
 .home-section {
+  height: 100vh;
   position: relative;
   z-index: -1;
   background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
@@ -582,6 +591,9 @@ html {
   color: white !important;
   background-color: transparent !important;
 }
+.about-me-story {
+  font-size: 22px;
+}
 
 .about-activity {
   list-style: none !important;
@@ -630,6 +642,7 @@ html {
   }
 }
 .resume .resume-title {
+  border-radius: 5px;
   font-size: 2em;
   font-weight: 700;
   padding-top: 30px;

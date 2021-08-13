@@ -79,7 +79,7 @@ function Resume() {
               title=""
               content={[
                 "Ruby: Ruby on Rails, Sinatra, ActiveRecord",
-                "JavaScript(ES6): NodeJS, React, React Native, React Native Navigation, Reux, Thunk, Hooks, Electron, Express",
+                "JavaScript(ES6): NodeJS, React, React Native, React Native Navigation, Redux, Thunk, Hooks, Electron, Express",
                 "SQL: SQLite3, PostgreSQL",
                 "HTML5, CSS",
                 "Microsoft Office Suite",

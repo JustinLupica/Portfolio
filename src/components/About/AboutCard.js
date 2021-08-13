@@ -8,7 +8,7 @@ function AboutCard() {
     <Card className="quote-card-view">
       <Card.Body>
         <blockquote className="blockquote mb-0">
-          <p style={{ textAlign: "justify" }}>
+          <p style={{ textAlign: "center" }}>
             Hi! I am <span className="purple">Justin Lupica </span>
             from <span className="purple"> Toledo, OH.</span>
             <br />I am a Software Engineering Graduate from Flatiron, with a
@@ -18,18 +18,21 @@ function AboutCard() {
             When I'm not coding, here are some other activities that I love to
             do!
           </p>
+          <br />
           <ul>
             <li className="about-activity">
-              <FaPlaystation /> Playing Games
+              <GiFamilyHouse /> Spending time with my
+              <span className="purple"> wife and kids</span>
             </li>
             <li className="about-activity">
-              <GiFamilyHouse /> Spending time with my wife and kids
+              <FaPlaystation /> Playing Games
             </li>
             <li className="about-activity">
               <FaPlaneDeparture /> Traveling
             </li>
             <li className="about-activity">
-              <GiAmericanFootballHelmet /> Being a diehard Cincinnati Bengals
+              <GiAmericanFootballHelmet /> Being a diehard
+              <span className="purple"> Cincinnati Bengals </span>
               fan!
             </li>
           </ul>
