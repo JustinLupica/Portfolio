@@ -32,6 +32,8 @@ function Projects() {
               link="https://musing-hypatia-273476.netlify.app/"
               github="https://github.com/JustinLupica/instagram-clone"
               icons={["React", "JavaScript", "Tailwind CSS", "Firebase"]}
+              git
+              push
             />
           </Col>
           <Col lg={4} className="project-card">
